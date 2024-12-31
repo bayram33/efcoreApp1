@@ -1,0 +1,34 @@
+﻿@model Student
+
+
+
+
+<h1 class="m-5">
+ Create a new Student
+</h1>
+
+
+<form asp-controller="Student" asp-action="Create" method="post">
+
+	<div class="mb-3">
+		<label asp-for="StudentName" class="form-label">Öğrenci Adı</label>
+		<input asp-for="StudentName" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label asp-for="StudentLastName" class="form-label">Öğrenci Soyadı</label>
+		<input asp-for="StudentLastName" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label asp-for="StudentEmail" class="form-label">Email</label>
+		<input asp-for="StudentEmail" class="form-control" />
+	</div>
+	<div class="mb-3">
+		<label asp-for="StudentPhoneNumber" class="form-label">Telefon No</label>
+		<input asp-for="StudentPhoneNumber" class="form-control" />
+	</div>
+
+	<button class="btn btn-secondary" type="submit">
+		Kaydet
+	</button>
+
+</form>

@@ -1,0 +1,31 @@
+﻿@model List<Student>
+
+
+
+
+<a class="btn btn-primary my-3" asp-controller="Student" asp-action="Create">Add New Student</a>
+<table class="table">
+	<thead>
+		<tr>
+			<th>StudentId</th>
+			<th>StudentName</th>
+			<th>StudentLastName</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.StudentId</td>
+				<td>@item.StudentName</td>
+				<td>@item.StudentLastName</td>
+				<td>
+					<a href="" class="btn btn-sm btn-primary">Details</a>
+					<a href="" class="btn btn-sm btn-danger">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
