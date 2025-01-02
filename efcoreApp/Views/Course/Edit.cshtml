@@ -1,0 +1,28 @@
+﻿
+
+@model Course
+
+
+<h1 class="m-5">
+    Update Course
+</h1>
+
+
+
+<form asp-controller="Course" asp-action="Edit" method="post">
+    <input asp-for="CourseId" type="hidden"/>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="CourseTitle">
+
+        </label>
+        <input class="form-control" asp-for="CourseTitle" />
+    </div>
+
+    <button class="btn btn-info" type="submit">
+        Update
+    </button>
+
+</form>
+
+

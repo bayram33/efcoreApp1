@@ -1,0 +1,35 @@
+﻿@model List<CourseRecord>
+
+<a class="btn btn-primary my-3" asp-controller="CourseRecord" asp-action="Create" >Add New Course Record</a>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Last Name</th>
+            <th>Course Name</th>
+            <th>Record Date</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Student.StudentName</td>
+                <td>@item.Student.StudentLastName</td>
+                <td>@item.Course.CourseTitle</td>
+                <td>@item.RecordDate</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-controller="" asp-action="" asp-route-id="">Edit</a>
+                    <a class="btn btn-sm btn-danger" asp-controller="" asp-action="" asp-route-id="">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
