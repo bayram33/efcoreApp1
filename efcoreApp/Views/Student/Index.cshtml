@@ -1,8 +1,5 @@
 ﻿@model List<Student>
 
-
-
-
 <a class="btn btn-primary my-3" asp-controller="Student" asp-action="Create">Add New Student</a>
 <table class="table">
 	<thead>
@@ -10,7 +7,7 @@
 			<th>StudentId</th>
 			<th>StudentName</th>
 			<th>StudentLastName</th>
-			<th></th>
+			<th>Operations</th>
 		</tr>
 	</thead>
 
@@ -22,8 +19,8 @@
 				<td>@item.StudentName</td>
 				<td>@item.StudentLastName</td>
 				<td>
-					<a href="" class="btn btn-sm btn-primary">Details</a>
-					<a href="" class="btn btn-sm btn-danger">Delete</a>
+					<a asp-controller="Student" asp-action="Edit" asp-route-id="@item.StudentId" class="btn btn-sm btn-primary">Edit</a>
+					<a asp-controller="Student" asp-action="Delete" asp-route-id="@item.StudentId" class="btn btn-sm btn-danger">Delete</a>
 				</td>
 			</tr>
 		}
